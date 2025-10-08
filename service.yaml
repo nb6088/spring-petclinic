@@ -1,0 +1,13 @@
+# Create a new file named service.yaml and add this code
+apiVersion: v1
+kind: Service
+metadata:
+  name: petclinic-service
+spec:
+  selector:
+    app: petclinic
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9966
+  type: LoadBalancer
