@@ -1,0 +1,23 @@
+# Create a new file named deployment.yaml and add this code
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: petclinic-deployment
+  labels:
+    app: petclinic
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: petclinic
+  template:
+    metadata:
+      labels:
+        app: petclinic
+    spec:
+      containers:
+      - name: petclinic-app-container
+        # This is a placeholder image. Our Jenkins pipeline will update it.
+        image: springcommunity/spring-petclinic-rest 
+        ports:
+        - containerPort: 9966
