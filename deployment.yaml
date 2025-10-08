@@ -20,4 +20,4 @@ spec:
         # This is a placeholder image. Our Jenkins pipeline will update it.
         image: springcommunity/spring-petclinic-rest 
         ports:
-        - containerPort: 9966
+        - containerPort: 8080
