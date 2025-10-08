@@ -15,7 +15,7 @@ pipeline {
             steps {
                 // ACTION: Replace this with your forked repo URL if you forked it
                 // If you didn't fork it, you can leave this as is for the lab
-                git 'https://github.com/nb6088/spring-petclinic.git'
+                git branch: 'main', url: 'https://github.com/nb6088/spring-petclinic.git'
             }
         }
 
