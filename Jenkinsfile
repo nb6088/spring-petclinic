@@ -41,8 +41,9 @@ pipeline {
 
         stage('Deploy to Kubernetes') {
             steps {
+                sh "aws eks --region ap-south-1 update-kubeconfig --name vle6-eks-cluster"
                 sh "kubectl set image deployment/petclinic-deployment petclinic-app-container=${DOCKER_IMAGE}"
-            }
+                }
         }
     }
 }
